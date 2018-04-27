@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RGB-Generator</title>
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="center">
+    <h1></h1>
+    <h2>Press this button for a new color</h2>
+    <button onclick="refreshPage()">Press</button>
+</div>
+<footer>Made by <a href="https://twitter.com/_realeaz">realeaz</a></footer>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $("body").css("background-color", rgb);
+    $("h1").text(rgb);
+</script>
+</body>
+</html>

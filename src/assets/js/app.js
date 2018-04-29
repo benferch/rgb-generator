@@ -10,3 +10,6 @@ function refreshPage() {
     window.location.reload();
     return
 }
+
+$("body").css("background-color", rgb);
+$("h1").text(rgb);

@@ -12,4 +12,4 @@ If you want to see a demo of this website, then click [here](https://realeaz.de/
 
 ## License
 
-This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details

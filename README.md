@@ -8,7 +8,7 @@ Copy everything of the src folder to your project folder.
 
 ## Demo
 
-If you want to see a demo of this website, then click [here](https://realeaz.de/rgb/).
+If you want to see a demo of this website, then click [here](http://rgb.realeaz.de/).
 
 ## License
 

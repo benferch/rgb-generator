@@ -11,5 +11,5 @@ function refreshPage() {
     return
 }
 
-$("body").css("background-color", rgb);
-$("h1").text(rgb);
+document.body.style.backgroundColor = rgb;
+document.getElementById("rgb").innerHTML = rgb;

@@ -1,6 +1,6 @@
 # RGB-Generator
 
-This is just a simple RGB generator.
+This is a simple RGB generator.
 
 ## Demo
 

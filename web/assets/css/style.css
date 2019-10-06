@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@font-face {
+    src: url("../fonts/Inter-Medium.ttf") format("truetype");
+    font-display: auto;
+    font-family: "Inter Regular";
+}
 
 html {
-    font-family: 'Raleway', sans-serif;
-    color: white;
+    font-family: 'Inter Regular', sans-serif;
+    color: #191d1f;
 }
 
 .center {
@@ -14,7 +18,7 @@ html {
 }
 
 button {
-    border: solid 2px white;
+    border: solid 2px #191d1f;
     border-radius: 50px;
     background: transparent;
     padding: 10px 80px;
@@ -22,37 +26,20 @@ button {
     font-size: 16px;
     width: 300px;
     align-items: center;
-    color: white;
+    color: #191d1f;
 }
 
 button:hover {
-    background: white;
-    color: #222;
+    background: #191d1f;
+    color: #fcfbf8;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #191d1f;
     transition: .2s all ease-in-out;
 }
 
 a:hover {
-    border-bottom: 0.2em white solid;
-}
-
-footer {
-    position:absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    left: 48%;
-    font-size: 18px;
-    text-align: center;
-    color: white
-}
-
-footer a {
-    color: white;
+    border-bottom: 0.2em #191d1f;
 }

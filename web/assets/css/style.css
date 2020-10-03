@@ -6,7 +6,7 @@
 
 html {
     font-family: 'Inter Regular', sans-serif;
-    color: #191d1f;
+    color: #121212;
 }
 
 .center {
@@ -18,28 +18,46 @@ html {
 }
 
 button {
-    border: solid 2px #191d1f;
-    border-radius: 50px;
+    border: solid 0.2em #121212;
+    border-radius: 5em;
     background: transparent;
-    padding: 10px 80px;
+    padding: 0.5em 0.5em;
     transition: all .2s ease-in-out;
-    font-size: 16px;
-    width: 300px;
+    width: 15em;
     align-items: center;
-    color: #191d1f;
+    color: #121212;
+    font-size: 1.2em;
+    outline: none;
 }
 
 button:hover {
-    background: #191d1f;
-    color: #fcfbf8;
+    background: #121212;
+    color: #fcfcfc;
 }
 
 a {
     text-decoration: none;
-    color: #191d1f;
+    color: #121212;
     transition: .2s all ease-in-out;
 }
 
 a:hover {
-    border-bottom: 0.2em #191d1f;
+    border-bottom: 0.2em #121212;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row button {
+    margin: 0.5em
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }

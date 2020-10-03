@@ -1,5 +1,7 @@
 window.onload = generateColor();
 
+let saves = [];
+
 function generateColor() {
   var min = 0;
   var max = 255;
@@ -34,3 +36,13 @@ function copy(code) {
   window.getSelection().empty();
   document.getElementById("hidden").type = "hidden";
 }
+
+function save() {
+  let color = {
+    rgb: document.getElementById("rgb").innerText,
+    hex: document.getElementById("hex").innerText,
+  };
+  saves.push(color);
+}
+
+document.getElementById("color").addEventListener("mouseover", function () {});

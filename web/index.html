@@ -4,31 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RGB-Generator</title>
-	<link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 
 <body>
 	<div class="center">
-		<svg height="200px" width="400px">
-			<rect id="rect" height="200px" width="400px"></rect>
+		<svg height="300px" width="600px">
+			<rect id="rect" height="300px" width="600px"></rect>
 		</svg>
-		<div>
-			<div class="row">
-				<div class="column">
-					<div class="row">
-						<h1 id="rgb">If nothing is here, click the "Click for a new color" button</h1>
-						<button onclick='copy("rgb")''>Copy RGB code</button>
-					</div>
-					<div class="row">
-					<h1 id="hex"></h1>
-					<button onclick=' copy("hex")'>Copy hex code</button>
-					</div>
-				</div>
-			</div>
+		<div class="row">
+			<h2 id="rgb">If nothing is here, click the "Click for a new color" button</h2>
+			<button onclick='copy("rgb")''>Copy RGB code</button>
+		</div>
+		<div class="row">
+			<h2 id="hex"></h2>
+			<button onclick=' copy("hex")'>Copy hex code</button>
 		</div>
 		<button onclick="generateColor()">Press for a new color</button>
+		<input id="hidden" type="hidden" />
 	</div>
-	<input id="hidden" type="hidden" />
 	<script type="text/javascript" src="./assets/js/index.js"></script>
 </body>
 

@@ -87,6 +87,7 @@ button {
 #bottom div {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	height: 60px;
 }
 
@@ -111,4 +112,8 @@ button {
 
 #bottom div div:hover>p {
 	opacity: 1;
+}
+
+#bottom div div p:hover {
+	cursor: pointer;
 }

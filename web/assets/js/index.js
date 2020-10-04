@@ -103,3 +103,16 @@ document.getElementById("saveclick").addEventListener("click", function () {
   save();
   loadSaves();
 });
+
+document.body.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.className == "rgb") {
+      copy("rgb");
+    }
+    if (e.target.className == "hex") {
+      copy("hex");
+    }
+  },
+  false
+);

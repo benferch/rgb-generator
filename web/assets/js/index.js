@@ -2,6 +2,21 @@ window.onload = generateColor();
 
 let saves = [];
 
+document.addEventListener("keydown", function (e) {
+  if (e.key == " " || e.code == "Space") {
+    generateColor();
+  }
+  if (e.key == "s" || e.code == "KeyS") {
+    save();
+  }
+  if (e.key == "l" || e.code == "KeyL") {
+    loadSaves();
+  }
+  if (e.key == "r" || e.code == "KeyR") {
+    clearSaves();
+  }
+});
+
 function generateColor() {
   var min = 0;
   var max = 255;
@@ -47,19 +62,24 @@ function save() {
   } else {
     saves.push(color);
   }
-  console.log(saves);
 }
 
 function loadSaves() {
   let containerDiv = document.createElement("div");
-  document.getElementById("bottom").innerHTML = "";
-  document.getElementById("bottom").appendChild(containerDiv);
+  let bottom = document.getElementById("bottom");
+  bottom.innerHTML = "";
+  bottom.appendChild(containerDiv);
   saves.forEach(function (item) {
     let itemDiv = document.createElement("div");
+    let rgbEl = document.createElement("p");
+    let hexEl = document.createElement("p");
+    itemDiv.appendChild(rgbEl);
+    itemDiv.appendChild(hexEl);
+    itemDiv.style.backgroundColor = item["hex"];
     containerDiv.appendChild(itemDiv);
 
-    itemDiv.innerHTML += item["hex"] + "<br />";
-    itemDiv.innerHTML += item["rgb"];
+    hexEl.innerHTML += item["hex"];
+    rgbEl.innerHTML += item["rgb"];
   });
 }
 

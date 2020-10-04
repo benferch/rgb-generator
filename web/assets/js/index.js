@@ -26,15 +26,15 @@ function generateColor() {
 }
 
 function copy(code) {
-  document.getElementById("hidden").type = "text";
-  document.getElementById("hidden").value = document.getElementById(
+  document.getElementById("input").type = "text";
+  document.getElementById("input").value = document.getElementById(
     code
   ).innerText;
-  document.getElementById("hidden").focus();
-  document.getElementById("hidden").select();
+  document.getElementById("input").focus();
+  document.getElementById("input").select();
   document.execCommand("copy");
   window.getSelection().empty();
-  document.getElementById("hidden").type = "hidden";
+  document.getElementById("input").type = "hidden";
 }
 
 function save() {
@@ -43,6 +43,33 @@ function save() {
     hex: document.getElementById("hex").innerText,
   };
   saves.push(color);
+  console.log(saves);
 }
 
-document.getElementById("color").addEventListener("mouseover", function () {});
+function loadSaves() {
+  let containerDiv = document.createElement("div");
+  document.getElementById("bottom").innerHTML = "";
+  document.getElementById("bottom").appendChild(containerDiv);
+  saves.forEach(function (item) {
+    let itemDiv = document.createElement("div");
+    containerDiv.appendChild(itemDiv);
+
+    itemDiv.innerHTML += item["hex"] + "<br />";
+    itemDiv.innerHTML += item["rgb"];
+  });
+}
+
+document.getElementById("color").addEventListener("mouseover", function () {
+  document.getElementById("save").classList.remove("hidden");
+  document.getElementById("save").classList.add("shown");
+});
+
+document.getElementById("color").addEventListener("mouseleave", function () {
+  document.getElementById("save").classList.add("hidden");
+  document.getElementById("save").classList.remove("shown");
+});
+
+document.getElementById("saveclick").addEventListener("click", function () {
+  save();
+  loadSaves();
+});

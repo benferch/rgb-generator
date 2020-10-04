@@ -1,6 +1,6 @@
 html {
 	font-size: 1.2em;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 
 .center {
@@ -32,4 +32,39 @@ html {
 
 button {
 	margin: 0.5em;
+}
+
+.optrans {
+	transition: .3s all ease-in-out;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.shown {
+	opacity: 1;
+}
+
+#save {
+	fill: #fcfcfc;
+	height: 300px;
+	width: 600px;
+	background-color: #12121293;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+}
+
+#save p {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#save p:hover {
+	cursor: pointer;
 }

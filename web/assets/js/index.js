@@ -73,14 +73,20 @@ function loadSaves() {
     let itemDiv = document.createElement("div");
     let rgbEl = document.createElement("p");
     let hexEl = document.createElement("p");
-    itemDiv.appendChild(rgbEl);
-    itemDiv.appendChild(hexEl);
+    itemDiv.appendChild(rgbEl).classList.add("rgb");
+    itemDiv.appendChild(hexEl).classList.add("hex");
     itemDiv.style.backgroundColor = item["hex"];
     containerDiv.appendChild(itemDiv);
 
     hexEl.innerHTML += item["hex"];
     rgbEl.innerHTML += item["rgb"];
   });
+}
+
+function clearSaves() {
+  saves = [];
+  let bottom = document.getElementById("bottom");
+  bottom.innerHTML = "";
 }
 
 document.getElementById("color").addEventListener("mouseover", function () {

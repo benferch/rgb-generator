@@ -42,7 +42,11 @@ function save() {
     rgb: document.getElementById("rgb").innerText,
     hex: document.getElementById("hex").innerText,
   };
-  saves.push(color);
+  if (saves.some((save) => save.rgb == color.rgb)) {
+    return;
+  } else {
+    saves.push(color);
+  }
   console.log(saves);
 }
 

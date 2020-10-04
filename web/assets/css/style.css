@@ -1,6 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	font-size: 1.2em;
-	overflow-y: hidden;
+	overflow: hidden;
+}
+
+.noselect {
+	user-select: none;
 }
 
 .center {
@@ -9,7 +18,6 @@ html {
 	justify-content: center;
 	text-align: center;
 	align-content: center;
-	height: 100vh;
 }
 
 .center svg {
@@ -32,4 +40,80 @@ html {
 
 button {
 	margin: 0.5em;
+}
+
+.optrans {
+	transition: .3s all ease-in-out;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.shown {
+	opacity: 1;
+}
+
+#save {
+	fill: #fcfcfc;
+	height: 300px;
+	width: 600px;
+	background-color: #12121293;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+}
+
+#save p {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.7em;
+}
+
+#save p:hover {
+	cursor: pointer;
+}
+
+#bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#bottom div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 60px;
+}
+
+#bottom div div p {
+	padding: 0.3em;
+	opacity: 0;
+	transition: .2s all ease-in-out;
+}
+
+#bottom div div {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	height: 80px;
+	width: 180px;
+	transition: .2s all ease-in-out;
+}
+
+#bottom div div:hover {
+	margin-top: -20px;
+}
+
+#bottom div div:hover>p {
+	opacity: 1;
+}
+
+#bottom div div p:hover {
+	cursor: pointer;
 }

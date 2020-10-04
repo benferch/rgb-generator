@@ -10,8 +10,11 @@
 
 <body>
 	<div class="center">
-		<svg height="300px" width="600px">
+		<svg id="color" height="300px" width="600px">
 			<rect id="rect" height="300px" width="600px"></rect>
+			<foreignObject id="save" class="hidden optrans noselect" x=0 y=0>
+				<p id="saveclick">Save</p>
+			</foreignObject>
 		</svg>
 		<div class="row">
 			<h2 id="rgb">If nothing is here, click the "Click for a new color" button</h2>
@@ -21,9 +24,13 @@
 			<h2 id="hex"></h2>
 			<button onclick=' copy("hex")'>Copy hex code</button>
 		</div>
-		<button onclick="generateColor()">Press for a new color</button>
-		<input id="hidden" type="hidden" />
+		<div class="row">
+			<button onclick="generateColor()">Press for a new color</button>
+			<button onclick="clearSaves()">Clear saved colors</button>
+		</div>
+		<input id="input" type="hidden" />
 	</div>
+	<div id="bottom"></div>
 	<script type="text/javascript" src="./assets/js/index.js"></script>
 </body>
 
